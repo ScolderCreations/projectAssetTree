@@ -5,7 +5,7 @@ const soundList = new Array()
 const imageList = new Array()
 
 function goPressed() {
-  parsed = JSON.parse(fetch("https://cors-anywhere.9pfs.rel.co/" + elem("inp").value).then(res => res.json)) || undefined
+  parsed = JSON.parse(fetch("https://cors-anywhere.9pfs.repl.co/" + elem("inp").value).then(res => res.json)) || undefined
   if (parsed !== undefined) {
     let sprites = parsed.targets
     for (sprite of sprites) {
@@ -16,7 +16,8 @@ function goPressed() {
         soundList.push(JSON.parse(`{"${asset.name}": "${asset.md5ext}`))
       }
     }
-  for (asset of Object.concat(soundList, imageList) {
+  for (asset of Object.concat(soundList, imageList)) {
     elems("body").innerHTML = elems("body").innerHTML + `<p class="output">AUDIO &quot;${asset[0]}&quot;: <a href="https://assets.scratch.mit.edu/${asset[1]}">view</a>`
   }
-    
+  }
+}
