@@ -16,8 +16,8 @@ function goPressed() {
         soundList.push(JSON.parse(`{"${asset.name}": "${asset.md5ext}`))
       }
     }
-  for (asset of Object.concat(soundList, imageList)) {
-    elems("body").innerHTML = elems("body").innerHTML + `<p class="output">AUDIO &quot;${asset[0]}&quot;: <a href="https://assets.scratch.mit.edu/${asset[1]}">view</a>`
-  }
+    for (asset of Object.concat(soundList, imageList)) {
+      elems("body").innerHTML = elems("body").innerHTML + `<p class="output">AUDIO &quot;${asset[0]}&quot;: <a href="https://assets.scratch.mit.edu/${asset[1]}">view</a>`
+    }
   }
 }
