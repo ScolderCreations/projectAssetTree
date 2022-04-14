@@ -1,3 +1,4 @@
+import fetch from 'cross-fetch';
 const elem = document.getElementById;
 const elems = document.querySelectorAll;
 var parsed;
