@@ -6,7 +6,7 @@ const soundList = new Array()
 const imageList = new Array()
 
 function goPressed() {
-  parsed = JSON.parse(fetch("https://cors-anywhere.9pfs.repl.co/" + elem("inp").value).then(res => res.json)) || undefined
+  parsed = JSON.parse(fetch(elem("inp").value).then(res => res.json)) || undefined
   if (parsed !== undefined) {
     let sprites = parsed.targets
     for (sprite of sprites) {
